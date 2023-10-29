@@ -1,0 +1,16 @@
+<script type="application/javascript" src="https://unpkg.com/valine"></script>
+<script type="application/javascript">
+  new Valine({
+    el: '#vlaine-comment',
+    appId: '<%= theme.valine.appId %>',
+    appKey: '<%= theme.valine.appKey %>',
+    pageSize: <%= theme.valine.pageSize %>,
+    notify: <%= theme.valine.notify %>,
+    avatar: '<%= theme.valine.avatar %>',
+    verify: <%= theme.valine.verify %>,
+    placeholder: '<%= theme.valine.placeholder %>',
+    visitor: <%= theme.valine.visitor %>,
+    highlight: <%= theme.valine.highlight %>,
+    recordIP: <%= theme.valine.recordIp %>,
+  })
+</script>

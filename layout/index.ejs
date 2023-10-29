@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- partial('_partial/head', {siteTitle: config.title}) %>
+    <meta name="description" content="<%- config.description %>" />
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app" @vue:mounted="mounted">
+
+    <%- partial('_partial/header') %>
+
+    <div class="max-w-4xl w-full mx-auto">
+      <%- partial('_partial/homepage-header') %>
+
+      <div
+        class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        <%- partial('_partial/post-list') %>
+      </div>
+
+      <%- partial('_partial/pagination') %>
+      <%- partial('_partial/footer') %>
+
+    </div>
+
+    <!-- Back to top -->
+    <div
+      class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200"
+      @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+  <%- js({src: '/js/main.js', type: 'module'}) %>
+</body>
+<%- partial('_partial/scripts') %>
+
+</html>

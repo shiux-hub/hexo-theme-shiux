@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script type="application/javascript" src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script type="application/javascript">
+
+var options = {
+  shortname: '<%= theme.disqus.shortname %>',
+  apikey: '<%= theme.disqus.apikey %>',
+}
+if ('<%= theme.disqus.api %>') {
+  options.api = '<%= theme.disqus.api %>'
+}
+new DisqusJS(options)
+</script>

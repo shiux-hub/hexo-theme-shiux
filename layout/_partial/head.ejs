@@ -1,0 +1,28 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title><%= siteTitle %></title>
+<link rel="shortcut icon" href="<%= theme.favicon.href %>" type="<%= theme.favicon.type %>" />
+<%- css([
+  'https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css',
+  'https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css',
+  '/css/tailwind.css',
+  '/css/main.css'
+]) %>
+
+<% if (theme.customStyles.enable) %>
+<%- css(theme.customStyles.path) %>
+
+<% if (config.feed.enable) %>
+<%- feed_tag('atom.xml') %>
+
+<% if (theme.ga) { %>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.ga %>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date());
+
+    gtag('config', '<%= theme.ga %>');
+  </script>
+<% } %>    

@@ -1,0 +1,24 @@
+{
+  "name": "hexo-theme-shiux",
+  "version": "1.0.0",
+  "description": "powerful theme for Shiux.",  
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/shiucs/hexo-theme-shiux/issues"
+  },
+  "homepage": "https://docs.shiux.com/",
+  "keywords": [
+    "hexo",
+    "theme",
+    "shiux"
+  ],
+  "author": "Shiux (https://github.com/shiux)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-wordcount": "^6.0.1"
+  }
+}

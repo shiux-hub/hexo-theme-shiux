@@ -1,0 +1,45 @@
+<header class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
+  <div class="flex-1 order-2 md:order-1 md:pr-16">
+    <div class="text-4xl font-bold text-center md:text-left">
+      <%= config.title %>
+    </div>
+    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
+      <%- config.description %>
+    </div>
+    <% if ( theme.homeBtn.enable ) { %>
+      <div class="mt-8 text-center md:text-left">
+        <a
+          href="<%= theme.homeBtn.link %>" 
+          arget="_blank"
+          class="text-sm bg-yellow-50 dark:bg-indigo-500 dark:text-gray-700 font-semibold px-4 py-2 inline-block yellow-btn transition-fast rounded"
+        ><%= theme.homeBtn.text %></a>
+      </div>
+    <% } %>
+    <% if (theme.social.enable) { %>
+      <div class="mt-8 flex items-center">
+        <% if (theme.social.text) { %>
+          <div class="text-gray-500 mr-2">
+            <%= theme.social.text %>
+          </div>
+        <% } %>
+        <% ['weixin', 'mail', 'github', 'twitter', 'weibo', 'zhihu', 'facebook', 'telegram', 'dribbble', 'instagram', 'behance', 'qq'].forEach((item) => { %>
+          <% if (theme.social.options[item]) { %>
+            <% if (item === 'wechat') { %>
+              <div class="relative mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 transition-fast dark:hover:bg-gray-600 wechat rounded">
+                <i class="ri-wechat-line"></i>
+                <img src="<%= `${theme.social.options[item]}` %>" alt="" class="absolute left-0 w-32 rounded" style="max-width: initial; top: 100%;" >
+              </div>
+            <% } else { %>
+              <a href="<%= theme.social.options[item] %>" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast rounded">
+                <i class="ri-<%= item %>-line"></i>
+              </a>
+            <% } %>
+          <% } %>
+        <% }) %>
+      </div>
+    <% } %>
+  </div>
+  <div class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
+    <img class="rounded-full object-cover" src="<%= theme.avatar %>" alt="<%= config.title %>" width="100%" height="100%">
+  </div>
+</header>

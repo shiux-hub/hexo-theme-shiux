@@ -1,0 +1,120 @@
+# 网站Logo
+avatar: /logo.svg
+
+# 网站图标
+favicon:
+  href: /favicon.ico # 图标路径
+  type: image/x-icon # 图标类型，可能的值有(image/png, image/vnd.microsoft.icon, image/x-icon, image/gif)
+
+function:
+  wordCount: true # 字数统计
+
+# 代码高亮
+codeHighlight:
+  enable: true
+  # 代码高亮主题(atom-dark, github, synthwave84, vs-light)
+  theme: github
+
+customStyles:
+  enable: true
+  path: /custom.css
+
+# 数学公式（KaTeX）渲染
+katexRender: false
+
+# 网页字体(Inter, PingFang TC, Georgia,serif)
+fontFamily: Inter
+
+# 首页按钮
+homeBtn:
+  enable: true
+  # 首页按钮文案
+  text: About Me!
+  # 首页按钮链接
+  link: /about.html
+
+menu:
+  首页: /
+  归档: /archive.html
+  标签: /tags.html
+  关于: /about.html
+
+# 社交信息
+social:
+  enable: true
+  # 社交信息文案
+  text: "Follow me \U0001F449"
+
+  options:
+    weixin:
+    mail: mailto:fuocu@fuocu.cn
+    github: https://github.com/shiucs
+    twitter:
+    weibo:
+    zhihu:
+    facebook:
+    telegram:
+    dribbble:
+    instagram:
+    behance:
+    qq: http://wpa.qq.com/msgrd?v=3&uin=3166234483&site=qq&menu=yes
+
+# 文案自定义
+paperwork:
+  # 阅读更多
+  readMore: 阅读全文
+  # 上一页
+  prevPage: 上一页
+  # 下一页
+  nextPage: 下一页
+
+# 在front matter中使用“description”来指定文章摘要
+excerpt_description: true
+
+comment:
+  enable: false
+  # 评论系统选择(gitalk, disqus, valine)
+  platform: gitalk
+
+gitalk:
+
+
+# 评论
+valine:
+  # 设置文档： https://valine.js.org/
+  appId:
+  appKey:
+  notify:
+  Verify:
+  Avatar:
+  PageSize:
+  Visitor:
+  Highlight:
+  RecordIp:
+  Placeholder:
+  # 自定义CSS
+  customCss:
+
+disqus:
+  api:
+  apiKey:
+  shortname:
+
+# 谷歌统计跟踪ID
+ga:
+
+# 底部内容
+footer:
+  enable: false
+  # 支持html
+  text: 
+
+# 文章目录
+toc:
+  enable: true
+  number: false
+
+feed:
+  enable: false
+  text: RSS
+  path: /rss.xml
