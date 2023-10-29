@@ -1,10 +1,11 @@
 {
   "name": "hexo-theme-shiux",
   "version": "1.0.0",
-  "description": "powerful theme for Shiux.",  
-  "main": "index.js",
+  "description": "Powerful theme for Shiux.",
+  "main": "package.json",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "eslint scripts/ source/js",
+    "stylint": "stylelint source/css/ --ip source/css/main.styl"
   },
   "bugs": {
     "url": "https://github.com/shiucs/hexo-theme-shiux/issues"
@@ -17,8 +18,11 @@
   ],
   "author": "Shiux (https://github.com/shiux)",
   "license": "Apache-2.0",
-  "dependencies": {
+  "devDependencies": {
+    "eslint": "^8.52.0",
     "hexo-generator-feed": "^3.0.0",
-    "hexo-wordcount": "^6.0.1"
+    "hexo-wordcount": "^6.0.1",
+    "stylelint": "^15.11.0",
+    "stylelint-stylus": "^0.18.0"
   }
 }
