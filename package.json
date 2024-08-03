@@ -19,10 +19,11 @@
   "author": "Shiux (https://github.com/shiux)",
   "license": "Apache-2.0",
   "devDependencies": {
-    "eslint": "^8.52.0",
+    "eslint": "^8.57.0",
     "hexo-generator-feed": "^3.0.0",
     "hexo-wordcount": "^6.0.1",
-    "stylelint": "^15.11.0",
-    "stylelint-stylus": "^0.18.0"
-  }
+    "stylelint": "^16.8.1",
+    "stylelint-stylus": "^1.0.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
